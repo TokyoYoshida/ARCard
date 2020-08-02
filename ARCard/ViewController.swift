@@ -46,7 +46,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
                 let scene = SCNScene(named: "art.scnassets/ship.scn")!
                 let modelNode = (scene.rootNode.childNode(withName: "ship", recursively: false))!
-                modelNode.scale = SCNVector3(x: 0.001, y: 0.001, z: 0.001)
+                modelNode.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
                 node.addChildNode(modelNode)
             }
         }
