@@ -7,19 +7,18 @@
 //
 
 import UIKit
-import RealityKit
+import ARKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet var arView: ARView!
+    @IBOutlet weak var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+
+        sceneView.scene = SCNScene(named: "art.scnassets/ship.scn")!
+
+        let configuration = ARWorldTrackingConfiguration()
+
+        sceneView.session.run(configuration)
     }
 }

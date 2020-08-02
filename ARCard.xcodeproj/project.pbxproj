@@ -15,6 +15,7 @@
 		1E2B6CDE24D55CCB00F451F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2B6CDC24D55CCB00F451F6 /* LaunchScreen.storyboard */; };
 		1E2B6CE924D55CCB00F451F6 /* ARCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B6CE824D55CCB00F451F6 /* ARCardTests.swift */; };
 		1E2B6CF424D55CCB00F451F6 /* ARCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B6CF324D55CCB00F451F6 /* ARCardUITests.swift */; };
+		1E360AF124D6FE1B009245F9 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E360AF024D6FE1B009245F9 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1E2B6CEF24D55CCB00F451F6 /* ARCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E2B6CF324D55CCB00F451F6 /* ARCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCardUITests.swift; sourceTree = "<group>"; };
 		1E2B6CF524D55CCB00F451F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E360AF024D6FE1B009245F9 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				1E2B6CD524D55CC900F451F6 /* Experience.rcproject */,
 				1E2B6CD724D55CC900F451F6 /* Main.storyboard */,
 				1E2B6CDA24D55CCB00F451F6 /* Assets.xcassets */,
+				1E360AF024D6FE1B009245F9 /* art.scnassets */,
 				1E2B6CDC24D55CCB00F451F6 /* LaunchScreen.storyboard */,
 				1E2B6CDF24D55CCB00F451F6 /* Info.plist */,
 			);
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E2B6CDE24D55CCB00F451F6 /* LaunchScreen.storyboard in Resources */,
+				1E360AF124D6FE1B009245F9 /* art.scnassets in Resources */,
 				1E2B6CDB24D55CCB00F451F6 /* Assets.xcassets in Resources */,
 				1E2B6CD924D55CCA00F451F6 /* Main.storyboard in Resources */,
 			);
