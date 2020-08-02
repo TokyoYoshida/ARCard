@@ -15,10 +15,40 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sceneView.scene = SCNScene(named: "art.scnassets/ship.scn")!
+        sceneView.scene = SCNScene()
+        
+        sceneView.autoenablesDefaultLighting = true
+        
+        sceneView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        let configuration = ARWorldTrackingConfiguration()
+        let configuration = ARImageTrackingConfiguration()
+        
+        configuration.trackingImages = ARReferenceImage.referenceImages(
+        inGroupNamed: "AR Resources", bundle: nil)!
 
         sceneView.session.run(configuration)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        sceneView.session.pause()
+    }
+
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        DispatchQueue.main.async {
+            
+            if (anchor.name == "apple_logo") {
+                
+                let scene = SCNScene(named: "art.scnassets/ship.scn")!
+                let modelNode = (scene.rootNode.childNode(withName: "ship", recursively: false))!
+                modelNode.scale = SCNVector3(x: 0.001, y: 0.001, z: 0.001)
+                node.addChildNode(modelNode)
+            }
+        }
     }
 }
